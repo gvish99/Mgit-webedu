@@ -1,0 +1,222 @@
+<div id="quiz"></div>
+<button id="submit">Submit Quiz</button>
+<div id="results"></div>
+<style type="text/css">
+	body{
+	font-size: 20px;
+	font-family: sans-serif;
+	color: #333;
+}
+.question{
+	font-weight: 600;
+}
+.answers {
+  margin-bottom: 20px;
+}
+.answers label{
+  display: block;
+}
+#submit{
+	font-family: sans-serif;
+	font-size: 20px;
+	background-color: #7386D5;
+	color: #fff;
+	border: 0px;
+	border-radius: 3px;
+	padding: 20px;
+	cursor: pointer;
+	margin-bottom: 20px;
+}
+#submit:hover{
+	background-color: #38a;
+}
+</style>
+<script type="text/javascript">
+	(function(){
+  function buildQuiz(){
+    
+    const output = [];
+
+    
+    myQuestions.forEach(
+      (currentQuestion, questionNumber) => {
+
+        
+        const answers = [];
+
+        
+        for(letter in currentQuestion.answers){
+
+          
+          answers.push(
+            `<label>
+              <input type="radio" name="question${questionNumber}" value="${letter}">
+              ${letter} :
+              ${currentQuestion.answers[letter]}
+            </label>`
+          );
+        }
+
+        
+        output.push(
+          `<div class="question"> ${currentQuestion.question} </div>
+          <div class="answers"> ${answers.join('')} </div>`
+        );
+      }
+    );
+
+    
+    quizContainer.innerHTML = output.join('');
+  }
+
+  function showResults(){
+
+   
+    const answerContainers = quizContainer.querySelectorAll('.answers');
+
+    
+    let numCorrect = 0;
+
+    
+    myQuestions.forEach( (currentQuestion, questionNumber) => {
+
+      
+      const answerContainer = answerContainers[questionNumber];
+      const selector = `input[name=question${questionNumber}]:checked`;
+      const userAnswer = (answerContainer.querySelector(selector) || {}).value;
+
+      
+      if(userAnswer === currentQuestion.correctAnswer){
+        
+        numCorrect++;
+
+        
+        answerContainers[questionNumber].style.color = 'lightgreen';
+      }
+      
+      else{
+        
+        answerContainers[questionNumber].style.color = 'red';
+      }
+    });
+
+    
+    resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length} (`+(numCorrect/myQuestions.length)*100 +`%)`;
+  }
+
+  const quizContainer = document.getElementById('quiz');
+  const resultsContainer = document.getElementById('results');
+  const submitButton = document.getElementById('submit');
+  const myQuestions = [
+    {
+      question: "What is the use of “a” in file handling ?",
+      answers: {
+        a: "read ",
+       b: "write",                      
+       c: "append",
+        d: "None of the mentioned"
+      },
+      correctAnswer: "c"
+    },{
+      question: " Which function is used to close a file in c",
+      answers: {
+        a: "close()",
+        b: "end()",
+        c: "stop()",
+        d: "closefile()"
+      },
+      correctAnswer: "a"
+    },
+{
+ question: "What is the use of fseek() method  in  files ? ",
+      answers: {
+        a: " sets the file’s current position at the offset ",
+        b: " sets the file’s previous position at the offset",                                                                                    
+        c: " sets the file’s current position within the file",
+        d: " none of the mentioned"
+      },
+      correctAnswer: "c"
+    },
+{
+      question: " Which of the following mode will refer to binary data ?",
+      answers: {
+        a: " r ",
+        b: "w",
+        c: "+",
+        d: "b"
+      },
+      correctAnswer: "d"
+    },
+{
+      question: " In f=open(“data.txt”, “r”), r refers to __________.",
+      answers: {
+        a: " File handle ",
+        b: " File object",
+        c: " File  mode ",
+        d: "Buffer "
+      },
+      correctAnswer: "c"
+    },
+{
+      question: " To open a file  poem.txt  for reading, the correct syntax is___________ . ",
+      answers: {
+        a: " file=open('poem.txt','r')",                                     
+        b: " file=open(file='poem.txt','r')",
+        c: " fileopen=('poem.txt','r')",
+        d: " f=('poem.txt','w')"
+      },
+      correctAnswer: "a"
+    },
+
+
+
+{
+      question: " 'w+' mode will _________________.",
+      answers: {
+        a: " first write the file by deleting the contents of the existing file, if the file exists.",
+        b: " first read the file and then write the contents by deleting its contents, if the file exists.",
+        c: " first write and then read the file contents, by deleting the contents of the file if the file exists.",
+        d: " first read and then write the contents, by deleting the contents of the file if the file exists."
+      },
+      correctAnswer: "c"
+    },
+{
+      question: " Which of the following true about FILE *fp",
+      answers: {
+        a: " FILE is a keyword in C for representing files and fp is a variable of FILE type.",
+        b: " FILE is a stream ",
+        c: " FILE is a buffered stream",
+        d: " FILE is a structure and fp is a pointer to the structure of FILE type d"
+      },
+      correctAnswer: "d"
+    },
+{
+      question: " The first and second arguments of fopen() are",
+      answers: {
+        a: " A character string containing the name of the file & the second argument is the mode .",
+        b: " A character string containing the name of the user & the second argument is the mode.",
+        c: " A character string containing file pointer & the second argument is the mode .",
+        d: " None of the mentioned ."
+      },
+      correctAnswer: "a"
+    },
+{
+      question: " Which of the following statements about stdout and stderr are true ?",
+      answers: {
+        a: " Same",
+        b: " Both connected to screen always.",
+        c: " Both connected to screen by default.",
+        d: " stdout is line buffered but stderr is unbuffered.",
+      },
+      correctAnswer: "c"
+    }
+
+  ];
+
+  
+  buildQuiz();
+
+  
+  submitButton.addEventListener('click', showResults);
+})();
+</script>

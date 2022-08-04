@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Mgitwebedu</title>
+<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />  
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<link rel="stylesheet" href="css/sidemenustyles.css">
+<style type="text/css">
+.navi{
+  height: 100px;
+}
+.homenav a{
+text-decoration: none;
+color: black;
+}
+.homenav a:hover{
+
+background-color: #846bfb;
+color: black; 
+border-radius: 40px;
+}
+.profile:hover {
+  
+background-color: #846bfb;
+
+border-radius: 40px;
+
+}
+.profile{
+  border-style: none;background-color: #fff;color:black;margin-top: 7px;padding: 2px;
+}
+</style>
+
+</head>
+
+<body>
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300i,400" rel="stylesheet">
+</head>
+<body>
+ 
+<div class="header">
+  <nav class="navbar navbar-expand-lg navi">
+  <div class="container-fluid homediv">
+  <img src="images/mw.png" style="width: 110px; height: 80px; margin-right: 10px;margin-top: 15px;">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse homenav" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item" style="margin-left: 1000px;">
+          <a class="nav-link active" aria-current="page" href="/" >Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/enrolledcourses" >My Courses</a>
+        </li>
+        <li class="nav-item" >
+          <form action="/profile" method="post"><button class="profile">Profile</button></form>
+        </li>
+        <li class="nav-item" >
+          <a class="nav-link active " aria-current="page" href="/logout">Logout</a>
+        </li>
+        
+        
+      </ul>
+     
+    </div>
+  </div>
+</nav>
+</div>
+
+>
+
+
+
+    <div class="wrapper">
+        <!-- Sidebar Holder -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3>Course Navigation</h3>
+            </div>
+
+            <ul class="list-unstyled components">
+                
+                
+                <li>
+                  
+                    <a href="#about" >About the course</a>
+                    
+                </li>
+                <li>
+                  
+                    <a href="#obj">Course Objectives</a>
+                    
+                </li>
+                <li>
+                  
+                    <a href="#out">Course Outcomes</a>
+                    
+                <li>
+                  
+                    <a href="#line" >Course Outine</a>
+                    
+                </li>
+                <li>
+                  
+                    <a href="#ins">Instructors</a>
+                    
+                </li>
+                
+                
+            </ul>
+
+           
+        </nav>
+
+        <!-- Page Content Holder -->
+        <div id="content">
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="navbar-btn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+                        <h2>Mathematics 1</h2>
+                       <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                       
+                        
+                    </div>
+
+                        <form action="/m1course" method="POST">
+            
+            
+            <button type="submit" class="btn" style="background-color: #6d7fcc;color: #fff;margin-left: 700px;">Go to Course</button>
+
+          </form>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                       
+                        
+                    </div>
+                </div>
+            </nav>
+            <div role="alert" class="alert alert-danger">
+                    <strong><i class="fas fa-info-circle"></i> Note: </strong> Already Enrolled</div>
+           <div id="about"><h2>About the course</h2> 
+            <p>Introduction to Matrices, Eigen values and Eigen vectors, Sequences & Series,Calculus and Multivariable calculus (Partial Differentiation and application are all covered in this course. </p></div><br>
+              
+            <div id="obj">
+             <h2>Course Objectives</h2><br>
+            <ul>
+              <li>
+                Types of matrices and their properties
+              </li>
+              <li>
+                Concept of a rank of the matrix and applying this concept to know the consistency and solving the system of linear equations
+              </li>
+              <li>
+                Concept of Eigen values and eigenvectors and to reduce the quadratic form to canonical form
+              </li>
+              <li>
+                Concept of Sequence.
+              </li>
+              <li>
+                Concept of nature of the series
+              </li>
+              <li>
+                Geometrical approach to the mean value theorems and their application to the mathematical problems.
+              </li>
+              <li>
+                Evaluation of surface areas and volumes of revolutions of curve
+              </li>
+              <li>
+                Evaluation of improper integrals using Beta and Gamma functions.
+              </li>
+              <li>
+                Partial differentiation, concept of total derivatives
+              </li>
+              <li>
+                Finding maxima and minima of function of two and three variables
+              </li>
+            </ul>
+          </div>
+            <br>
+            
+
+            <div id="out">    
+            <h2>Course Outcomes: The student will learn</h2><br>
+            <ul>
+              <li>
+                Write the matrix representation of a set of linear equations and to analyse the solution of the system of equations
+              </li>
+              <li>
+               Find the Eigen values and Eigen vector
+              </li>
+              <li>
+                 Reduce the quadratic form to canonical form using orthogonal transformations
+              </li>
+              <li>
+                Analyse the nature of sequence and series.
+              </li>
+              <li>
+                Solve the applications on the mean value theorem
+              </li>
+              <li>
+                Evaluate the improper integrals using Beta and Gamma function
+              </li>
+              <li>
+                Find the extreme values of functions of two variables with/ without constrain
+              </li>
+            </ul>
+            <br>
+            </div>
+            <div id="line">
+            <h2>Course Outine</h2>
+           <ul>
+             <li>
+              <b>Week  1 :</b>Types of Matrices, Symmetric, Hermitian, Skew-symmetric, Skew-Hermitian, orthogonal matrices; Unitary Matrices, Rank of a matrix by Echelon form and Normal form ,Inverse of Non-singular matrices by Gauss-Jordan method . 
+             </li><br>
+               <li>
+              <b>Week  2 :</b> System of linear equations: Solving   system of Homogeneous and Non-Homogeneous equations, Gauss elimination method, Gauss Seidel Iteration Method.
+             </li><br>
+               <li>
+              <b>Week  3 :</b> Linear Transformation and Orthogonal Transformation: Eigen values and Eigen vectors ,Diagonalization of a matrix ,Cayley-Hamilton Theorem (without proof) 
+             </li><br>
+               <li>
+              <b>Week  4 :</b> Finding inverse and power of a matrix by Cayley-Hamilton Theorem, Quadratic forms and Nature of the Quadratic Forms, Reduction of Quadratic form to canonical forms by Orthogonal Transformation.
+             </li><br>
+               <li>
+              <b>Week  5 :</b>Sequence: Definition of a sequence, Limit, Convergent, Divergent and Oscillatory sequences 
+             </li><br>
+               <li>
+              <b>Week  6 :</b> Series: Convergent, Divergent and Oscillatory Series, Series of positive terms, Comparison test ,p-test  D-Alembert’s ratio test 
+             </li><br>
+               <li>
+              <b>Week  7 :</b> Raabe’s test, Cauchy’s Integral test, Cauchy’s root test, Logarithmic test, Alternating series: Leibnitz test, Alternating  convergent series: Absolute and Conditionally Convergence 
+             </li><br>
+               <li>
+              <b>Week  8 :</b> Mean value theorems: Rolle’s  theorem with Geometrical Interpretation and applications, Lagrange’s Mean value theorem with Geometrical Interpretation and applications, Cauchy’s Mean value Theorem Taylor’s Series, Applications of definite integrals to evaluate surface areas and volumes of revolutions of curves (Only in Cartesian coordinates) ,Definition of Improper Integral: Beta and Gamma functions and their applications..
+             </li><br>
+               <li>
+              <b>Week  9 :</b> Definitions of Limit and continuity ,Partial Differentiation ,Euler’s Theorem, Total derivative ,Jacobian Functional dependence & independence ,Maxima and minima of functions of two variables and three variables using method of Lagrange multipliers .
+             </li><br>
+               
+
+           </ul>
+
+             </div>   
+            
+            <div id="ins">
+            <h2>Instructors</h2>
+            <p>Dr.M V Ramana Murthy</p>
+          
+
+
+            
+
+           
+        </div>
+    
+
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+                $(this).toggleClass('active');
+            });
+        });
+    </script>
+</body>
+
+</html>

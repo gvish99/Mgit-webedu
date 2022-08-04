@@ -1,0 +1,219 @@
+<div id="quiz"></div>
+<button id="submit">Submit Quiz</button>
+<div id="results"></div>
+<style type="text/css">
+	body{
+	font-size: 20px;
+	font-family: sans-serif;
+	color: #333;
+}
+.question{
+	font-weight: 600;
+}
+.answers {
+  margin-bottom: 20px;
+}
+.answers label{
+  display: block;
+}
+#submit{
+	font-family: sans-serif;
+	font-size: 20px;
+	background-color: #7386D5;
+	color: #fff;
+	border: 0px;
+	border-radius: 3px;
+	padding: 20px;
+	cursor: pointer;
+	margin-bottom: 20px;
+}
+#submit:hover{
+	background-color: #38a;
+}
+</style>
+<script type="text/javascript">
+	(function(){
+  function buildQuiz(){
+    
+    const output = [];
+
+    
+    myQuestions.forEach(
+      (currentQuestion, questionNumber) => {
+
+        
+        const answers = [];
+
+        
+        for(letter in currentQuestion.answers){
+
+          
+          answers.push(
+            `<label>
+              <input type="radio" name="question${questionNumber}" value="${letter}">
+              ${letter} :
+              ${currentQuestion.answers[letter]}
+            </label>`
+          );
+        }
+
+        
+        output.push(
+          `<div class="question"> ${currentQuestion.question} </div>
+          <div class="answers"> ${answers.join('')} </div>`
+        );
+      }
+    );
+
+    
+    quizContainer.innerHTML = output.join('');
+  }
+
+  function showResults(){
+
+   
+    const answerContainers = quizContainer.querySelectorAll('.answers');
+
+    
+    let numCorrect = 0;
+
+    
+    myQuestions.forEach( (currentQuestion, questionNumber) => {
+
+      
+      const answerContainer = answerContainers[questionNumber];
+      const selector = `input[name=question${questionNumber}]:checked`;
+      const userAnswer = (answerContainer.querySelector(selector) || {}).value;
+
+      
+      if(userAnswer === currentQuestion.correctAnswer){
+        
+        numCorrect++;
+
+        
+        answerContainers[questionNumber].style.color = 'lightgreen';
+      }
+      
+      else{
+        
+        answerContainers[questionNumber].style.color = 'red';
+      }
+    });
+
+    
+    resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length} (`+(numCorrect/myQuestions.length)*100 +`%)`;
+  }
+
+  const quizContainer = document.getElementById('quiz');
+  const resultsContainer = document.getElementById('results');
+  const submitButton = document.getElementById('submit');
+  const myQuestions = [
+    {
+      question: "One of several possible actions will then be carried out, depending on the outcome of the logical test. This is known as",
+      answers: {
+        a: "nesting",
+        b: "branching",
+        c: "cloning",
+        d: "looping"
+      },
+      correctAnswer: "b"
+    },{
+      question: "the program may require that a group of instructions be executed repeatedly, until some logical condition has been satisfied. This is known as ",
+      answers: {
+        a: "looping",
+        b: "branching",
+        c: "selection",
+        d: "matching"
+      },
+      correctAnswer: "a"
+    },
+{
+      question: "The conditional operator ?: is equivalent to a ",
+      answers: {
+        a: "if statement",
+        b: "else-if",
+        c: "if",
+        d: "if-else"
+      },
+      correctAnswer: "d"
+    },
+{
+      question: "_______ statement is used to carry out looping operations, in which a group of statements is executed repeatedly, until some condition has been sat is fied.",
+      answers: {
+        a: "do",
+        b: "while",
+        c: "do-while",
+        d: "if-else"
+      },
+      correctAnswer: "b"
+    },
+{
+      question: "No.of expressions a for loop consists are",
+      answers: {
+        a: "1",
+        b: "2",
+        c: "3",
+        d: "4"
+      },
+      correctAnswer: "c"
+    },
+{
+      question: "If statements ",
+      answers: {
+        a: "used to evaluate a condition that's applied to one or two boolean expressions.",
+        b: "a programming conditional statement that, if proved true, performs a function or displays information.",
+        c: "a process or set of rules to be followed in calculations or other problem-solving operations, especially by a computer",
+        d: "used to execute a block of statements continuously until the given condition is true"
+      },
+      correctAnswer: "b"
+    },
+{
+      question: "______ statement causes a particular group of statements to be chosen  from  several  available groups",
+      answers: {
+        a: "loop",
+        b: "switch",
+        c: "break",
+        d: "if"
+      },
+      correctAnswer: "b"
+    },
+{
+      question: "statement is used to terminate loops or to exit from a switch. It can be used within a for, while, do - while, or switch statement.",
+      answers: {
+        a: "if",
+        b: "if-else",
+        c: "break",
+        d: "while"
+      },
+      correctAnswer: "c"
+    },
+{
+      question: "which of the following is a palindrome.",
+      answers: {
+        a: "roar",
+        b: "level",
+        c: "pool",
+        d: "food"
+      },
+      correctAnswer: "b"
+    },
+{
+      question: "______statement is used to alter the nonnal sequence of program execution by transferring control to some other part of the program",
+      answers: {
+        a: "continue",
+        b: "while",
+        c: "goto",
+        d: "if"
+      },
+      correctAnswer: "c"
+    }
+
+  ];
+
+  
+  buildQuiz();
+
+  
+  submitButton.addEventListener('click', showResults);
+})();
+</script>

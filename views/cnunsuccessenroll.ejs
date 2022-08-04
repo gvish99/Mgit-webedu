@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Mgitwebedu</title>
+<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />  
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<link rel="stylesheet" href="css/sidemenustyles.css">
+<style type="text/css">
+.navi{
+  height: 100px;
+}
+.homenav a{
+text-decoration: none;
+color: black;
+}
+.homenav a:hover{
+
+background-color: #846bfb;
+color: black; 
+border-radius: 40px;
+}
+.profile:hover {
+  
+background-color: #846bfb;
+
+border-radius: 40px;
+
+}
+.profile{
+  border-style: none;background-color: #fff;color:black;margin-top: 7px;padding: 2px;
+}
+</style>
+
+</head>
+
+<body>
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300i,400" rel="stylesheet">
+</head>
+<body>
+ 
+<div class="header">
+  <nav class="navbar navbar-expand-lg navi">
+  <div class="container-fluid homediv">
+  <img src="images/mw.png" style="width: 110px; height: 80px; margin-right: 10px;margin-top: 15px;">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse homenav" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item" style="margin-left: 1000px;">
+          <a class="nav-link active" aria-current="page" href="/" >Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/enrolledcourses" >My Courses</a>
+        </li>
+        <li class="nav-item" >
+          <form action="/profile" method="post"><button class="profile">Profile</button></form>
+        </li>
+        <li class="nav-item" >
+          <a class="nav-link active " aria-current="page" href="/logout">Logout</a>
+        </li>
+        
+        
+      </ul>
+     
+    </div>
+  </div>
+</nav>
+</div>
+
+
+
+
+    <div class="wrapper">
+        <!-- Sidebar Holder -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3>Course Navigation</h3>
+            </div>
+
+            <ul class="list-unstyled components">
+                
+                
+                <li>
+                  
+                    <a href="#about" >About the course</a>
+                    
+                </li>
+                <li>
+                  
+                    <a href="#obj">Course Objectives</a>
+                    
+                </li>
+                <li>
+                  
+                    <a href="#out">Course Outcomes</a>
+                    
+                <li>
+                  
+                    <a href="#line" >Course Outine</a>
+                    
+                </li>
+                <li>
+                  
+                    <a href="#ins">Instructors</a>
+                    
+                </li>
+               
+                
+            </ul>
+
+           
+        </nav>
+
+        <!-- Page Content Holder -->
+        <div id="content">
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="navbar-btn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+                        <h2>CN</h2>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                       
+                        
+                    </div>
+                    <form action="/cncourse" method="POST">
+            <div class="form-group">
+             
+            </div>
+             <input type="hidden" id="custId" name="coursename" value="CN">
+            
+            <button type="submit" class="btn" style="background-color: #6d7fcc;color: #fff;margin-left: 700px;">Go to course</button>
+
+          </form>
+                </div>
+            </nav>
+              <div role="alert" class="alert alert-danger">
+                    <strong><i class="fas fa-info-circle"></i> Note: </strong> Already Enrolled</div>
+           <div id="about"><h2>About the course</h2> 
+            <p>Introduction to D.C. Circui,  A.C. Circuits, Transformers,Electrical Machines and Electrical Installations are all covered in this course. </p></div><br>
+             
+            <div id="obj">
+             <h2>Course Objectives</h2><br>
+            <ul>
+              <li>
+               To introduce the concepts of electrical circuits and its components</li>
+              <li>
+              To understand magnetic circuits, DC circuits and AC single phase & three phase circuit
+              </li>
+              <li>
+              To study and understand the different types of DC/AC machines and Transformers.
+              </li>
+              <li>
+              To import the knowledge of various electrical installations
+              </li>
+               <li>
+                 To introduce the concept of power, power factor and its improvement
+              </li>
+            </ul>
+          </div>
+            <br>
+            
+
+            <div id="out">    
+            <h2>Course Outcomes: The student will learn</h2><br>
+            <ul>
+              <li>
+                To analyze and solve electrical circuits using network laws and theorem
+              </li>
+              <li>
+                To understand and analyze basic Electric and Magnetic circuits.
+              </li>
+              <li>
+                To study the working principles of Electrical Machines 
+              </li>
+              <li>
+                To introduce components of Low Voltage Electrical Installations
+              </li>
+             
+            </ul>
+            <br>
+            </div>
+            <div id="line">
+            <h2>Course Outine</h2>
+           <ul>
+             <li>
+              <b>Week  1 :</b> D.C. Circuits Electrical circuit elements (R, L and C) , Voltage and current sources, KVL&KCL 
+             </li><br>
+               <li>
+              <b>Week  2 :</b> Analysis of simple circuits with dc excitation, Superposition , Thevenin and Norton Theorems , Time-domain analysis of first-order RL and RC circuits .
+             </li><br>
+               <li>
+              <b>Week  3 :</b>A.C. Circuits Representation of sinusoidal waveforms, Peak and rms values, Phasor representation,( Real power, Reactive power, Apparent power, Power factor) .
+             </li><br>
+               <li>
+              <b>Week  4 :</b>Analysis of single-phase ac circuits consisting of R, L, C, RL, RC, RLC combinations (series and parallel), Resonance in series RL-C circuit, Three-phase balanced circuits, Voltage and current relations in star and delta connections.
+               <li>
+              <b>Week  5 :</b> Transformers Ideal and practical transformer, Equivalent circuit, Losses in transformers,    Regulation and efficiency, Auto-transformer and three-phase transformer connections .
+             </li><br>
+               <li>
+              <b>Week  6 :</b> Electrical Machines Generation of rotating magnetic fields, Construction and working of a three-phase induction motor, Significance of torque-slip characteristic, Loss components and efficiency.
+             </li><br>
+               <li>
+              <b>Week  7 :</b>Starting and speed control of induction motor, Single-phase induction motor: Construction, working, Torque-speed characteristic and speed control of separately excited dc motor, Construction and working of synchronous generators.
+               <li>
+              <b>Week  8 :</b>Electrical Installations Components of LT Switchgear: Switch Fuse Unit (SFU), MCB, ELCB, MCCB, Types of Wires and Cables, Earthing ,Types of Batteries,  Important Characteristics for Batteries, Elementary calculations for energy consumption, power factor improvement and battery backup.
+             </li><br>
+               
+
+           </ul>
+
+             </div>  
+            
+            <div id="ins">
+            <h2>Instructors</h2>
+            <p>C V K</p>
+          </div>
+         <div class="container mt-5">
+  </div>
+
+
+            
+
+           
+        </div>
+    
+
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+                $(this).toggleClass('active');
+            });
+        });
+
+    </script>
+</body>
+
+</html>

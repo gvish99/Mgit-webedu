@@ -1,0 +1,200 @@
+<div id="quiz"></div>
+<button id="submit">Submit Quiz</button>
+<div id="results"></div>
+<style type="text/css">
+	body{
+	font-size: 20px;
+	font-family: sans-serif;
+	color: #333;
+}
+.question{
+	font-weight: 600;
+}
+.answers {
+  margin-bottom: 20px;
+}
+.answers label{
+  display: block;
+}
+#submit{
+	font-family: sans-serif;
+	font-size: 20px;
+	background-color: #7386D5;
+	color: #fff;
+	border: 0px;
+	border-radius: 3px;
+	padding: 20px;
+	cursor: pointer;
+	margin-bottom: 20px;
+}
+#submit:hover{
+	background-color: #38a;
+}
+</style>
+<script type="text/javascript">
+	(function(){
+  function buildQuiz(){
+    
+    const output = [];
+
+    
+    myQuestions.forEach(
+      (currentQuestion, questionNumber) => {
+
+        
+        const answers = [];
+
+        
+        for(letter in currentQuestion.answers){
+
+          
+          answers.push(
+            `<label>
+              <input type="radio" name="question${questionNumber}" value="${letter}">
+              ${letter} :
+              ${currentQuestion.answers[letter]}
+            </label>`
+          );
+        }
+
+        
+        output.push(
+          `<div class="question"> ${currentQuestion.question} </div>
+          <div class="answers"> ${answers.join('')} </div>`
+        );
+      }
+    );
+
+    
+    quizContainer.innerHTML = output.join('');
+  }
+
+  function showResults(){
+
+   
+    const answerContainers = quizContainer.querySelectorAll('.answers');
+
+    
+    let numCorrect = 0;
+
+    
+    myQuestions.forEach( (currentQuestion, questionNumber) => {
+
+      
+      const answerContainer = answerContainers[questionNumber];
+      const selector = `input[name=question${questionNumber}]:checked`;
+      const userAnswer = (answerContainer.querySelector(selector) || {}).value;
+
+      
+      if(userAnswer === currentQuestion.correctAnswer){
+        
+        numCorrect++;
+
+        
+        answerContainers[questionNumber].style.color = 'lightgreen';
+      }
+      
+      else{
+        
+        answerContainers[questionNumber].style.color = 'red';
+      }
+    });
+
+    
+    resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length} (`+(numCorrect/myQuestions.length)*100 +`%)`;
+  }
+
+  const quizContainer = document.getElementById('quiz');
+  const resultsContainer = document.getElementById('results');
+  const submitButton = document.getElementById('submit');
+  const myQuestions = [
+    {
+      question: "The process in which a function calls itself directly or indirectly is called?",
+      answers: {
+        a: " Recursion",
+        b: " Type Conversions",
+        c: " Constant",
+        d: " Abstract Classes"
+      },
+      correctAnswer: "a"
+    },
+{
+      question: " A function fun is called __________ if it calls the same function fun.",
+      answers: {
+        a: " indirect recursive",
+        b: " direct recursive",
+        c: " Both A and B",
+        d: " None of the above"
+      },
+      correctAnswer: "b"
+    },
+{
+      question: " Which of the following is not an example of recursion?",
+      answers: {
+        a: " Towers of Hanoi (TOH)",
+        b: " DFS",
+        c: ". Inorder Tree Traversals ",
+        d: " SFS"
+      },
+      correctAnswer: "d"
+    }, 
+{
+      question: " When any function is called from main(), the memory is allocated to it on the stack.",
+      answers: {
+        a: " TRUE",
+        b: " FALSE",
+        c: " Can be true or false",
+        d: " Cannot Say"
+      },
+      correctAnswer: "a"
+    },
+{
+      question: " Iteration requires more system memory than recursion.",
+      answers: {
+        a: "TRUE",
+        b: "FALSE",
+        c: "can be true or false",
+        d: "cannot say"
+      },
+      correctAnswer: "b"
+    },
+{
+      question: " When a recursive function is called in the absence of an exit condition, it results in an infinite loop due to which the stack keeps getting filled(stack overflow). This results in a run time error.",
+      answers: {
+        a: " TRUE ",
+        b: " FALSE ",
+        c: " can be true or false ",
+        d: " cannot say "
+      },
+      correctAnswer: "a"
+    },
+{
+      question: " The data structure used to implement recursive function calls _____________ ",
+      answers: {
+        a: " Array",
+        b: " Linked List ",
+        c: ". Binary tree",
+        d: " Stack "
+      },
+      correctAnswer: ""
+    },
+{
+      question: " Which of the following is true about recursion? ",
+      answers: {
+        a: " Recursion provides a clean and simple way to write code.",
+        b: " The recursive program has less space requirements than iterative program",
+        c: " The principle of stack is FIFO",
+        d: ". All of the above"
+      },
+      correctAnswer: "a"
+    }
+
+  ];
+
+  
+  buildQuiz();
+
+  
+  submitButton.addEventListener('click', showResults);
+})();
+</script>

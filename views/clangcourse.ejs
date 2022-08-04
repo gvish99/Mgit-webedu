@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Mgitwebedu</title>
+<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />  
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<link rel="stylesheet" href="css/sidemenustyles.css">
+<style type="text/css">
+.navi{
+  height: 100px;
+}
+.homenav a{
+text-decoration: none;
+color: black;
+}
+.homenav a:hover{
+
+background-color: #846bfb;
+color: black; 
+border-radius: 40px;
+}
+.profile:hover {
+  
+background-color: #846bfb;
+
+border-radius: 40px;
+
+}
+.profile{
+  border-style: none;background-color: #fff;color:black;margin-top: 7px;padding: 2px;
+}
+</style>
+
+</head>
+
+<body>
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300i,400" rel="stylesheet">
+</head>
+<body>
+ 
+<div class="header">
+  <nav class="navbar navbar-expand-lg navi">
+  <div class="container-fluid homediv">
+  <img src="images/mw.png" style="width: 110px; height: 80px; margin-right: 10px;margin-top: 15px;">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse homenav" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item" style="margin-left: 1000px;">
+          <a class="nav-link active" aria-current="page" href="/" >Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/enrolledcourses" >My Courses</a>
+        </li>
+        <li class="nav-item" >
+          <form action="/profile" method="post"><button class="profile">Profile</button></form>
+        </li>
+        <li class="nav-item" >
+          <a class="nav-link active " aria-current="page" href="/logout">Logout</a>
+        </li>
+        
+        
+      </ul>
+     
+    </div>
+  </div>
+</nav>
+</div>
+
+
+
+<div class="wrapper">
+        <!-- Sidebar Holder -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3>Course Navigation</h3>
+            </div>
+
+            <ul class="list-unstyled components">
+                
+                
+                <li>
+                  
+                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Week 1</a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                        <li>
+                            <a href="https://www.youtube.com/embed/KWRVlZB56DA" target="iframe_a">Introduction to Programming</a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/embed/5hy1hUEQELk" target="iframe_a">Introduction to components of a computer system </a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/embed/D-cBawz8F-o" target="iframe_a">Creating, Compiling and Executing a Program</a>
+
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/embed/0xN7uxFmvTk" target="iframe_a">Number Systems</a>
+
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/embed/vxJ_UavXbwY" target="iframe_a">Number Systems(continued)</a>
+                        </li>
+                        <li>
+                            <a href="/clangresourses1" target="iframe_a">References</a>
+                        </li>
+                        <li>
+                          <form action="/clangquiz1" method="post" target="iframe_a"><button type="submit" class="btn btn-light qbtn">Quiz</button></form>
+                            
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                  
+                    <a href="#pageSubmenu2" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Week 2</a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu2">
+                        <li>
+                            <a href="https://www.youtube.com/embed/p0NgRRAbL48" target="iframe_a">Introduction to algorithms</a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/embed/y7cl5IUVaRY" target="iframe_a">Representation of Algorithm, Flowchart</a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/embed/HucJhUkDJuk" target="iframe_a">Program Design</a>
+
+                        </li>
+                        
+                        <li>
+                            <a href="/clangresourses2" target="iframe_a">References</a>
+                        </li>
+                        <li>
+                            <form action="/clangquiz2" method="post" target="iframe_a"><button type="submit" class="btn btn-light qbtn">Quiz</button></form>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                  
+                    <a href="#pageSubmenu3" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Week 3</a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu3">
+                        <li>
+                            <a href="https://www.youtube.com/embed/j1u3V6pzwEI" target="iframe_a">Data Types</a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/embed/rFnWoTnoC50" target="iframe_a">Variables</a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/embed/7XvsuMK3PO8" target="iframe_a">Syntax and Logical Errors in compilation </a>
+
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/embed/oYS5vZ5oOoM" target="iframe_a">Object and Executable code </a>
+                        </li>
+                          <li>
+                            <a href="https://www.youtube.com/embed/E1_Gg6dURwk" target="iframe_a">Operators  </a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/embed/U7KScjzj1os" target="iframe_a">Operator Precedence and Associativity </a>
+                        </li><li>
+                            <a href="https://www.youtube.com/embed/aQZYjZ8q5vw" target="iframe_a">Expression evaluation </a>
+                        </li><li>
+                            <a href="https://www.youtube.com/embed/VSTBOL4T1Bo" target="iframe_a">Storage Classes </a>
+                        </li><li>
+                            <a href="https://www.youtube.com/embed/xi2wf0Zy2Y4" target="iframe_a">Type conversion </a>
+                        </li><li>
+                            <a href="https://www.youtube.com/embed/JArmogmRCcg" target="iframe_a">Command line arguments </a>
+                        </li><li>
+                            <a href="https://www.youtube.com/embed/2dsSGnmbXNM" target="iframe_a">Main method </a>
+                        </li><li>
+                            <a href="https://www.youtube.com/embed/xXBitioUzf8" target="iframe_a">Bitwise operations  </a>
+                        </li>
+                        <li>
+                            <a href="/clangresourses3" target="iframe_a">References</a>
+                        </li>
+                        <li>
+                            <form action="/clangquiz3" method="post" target="iframe_a"><button type="submit" class="btn btn-light qbtn">Quiz</button></form>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                  
+                    <a href="#pageSubmenu4" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Week 4</a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu4">
+                       <li>
+                            <a href="https://www.youtube.com/embed/Y8cR0P5S21M" target="iframe_a">Conditional statements </a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/embed/UUWqYlcjX6M" target="iframe_a">Nested if </a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/embed/2o_4Mm5JEio" target="iframe_a">Switch </a>
+
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/embed/wYn1pHFk8tM" target="iframe_a">If, Nested If and Switch</a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/embed/vPfu5lXnEl8" target="iframe_a">Loop control statements </a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/embed/WDJpZhU-Ikc" target="iframe_a">Loop control statements continued</a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/embed/kidWWcv1g0A" target="iframe_a">Simple input and output statements </a>
+                        </li><li>
+                            <a href="https://www.youtube.com/embed/fVwuiuirzmc" target="iframe_a">Introduction to stdin, stdout and stderr </a>
+                        </li>
+                        
+                        <li>
+                            <a href="/clangresourses4" target="iframe_a">References</a>
+                        </li>
+                        <li>
+                            <form action="/clangquiz4" method="post" target="iframe_a"><button type="submit" class="btn btn-light qbtn">Quiz</button></form>
+                        </li> 
+                    </ul>
+                </li>
+                <li>
+                  
+                    <a href="#pageSubmenu5" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Week 5</a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu5">
+                        <li>
+                            <a href="https://www.youtube.com/embed/SPuS9UJF1lo" target="iframe_a">Arrays(1d and 2d arrays)</a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/embed/HyDE7T6YPsU" target="iframe_a">Creating, accessing and manipulating elements of 1d arrays </a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/embed/vyOZcg4cPRY" target="iframe_a">Creating, accessing and manipulating elements of 2d arrays</a>
+
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/embed/AxMhbA_2X9E" target="iframe_a">Introduction to strings </a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/embed/ka6cg9szUtQ" target="iframe_a">Handling strings as array of characters  </a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/embed/b-5beEPeV0c" target="iframe_a">Basic string functions </a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/embed/AefKSoNpZtQ" target="iframe_a">Array of strings </a>
+                        </li><li>
+                            <a href="https://www.youtube.com/embed/Ranc3VvjI88" target="iframe_a">Defining and initializing structures  </a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/embed/T976YpsV62w" target="iframe_a">Unions </a>
+                        </li><li>
+                            <a href="https://www.youtube.com/embed/3LQTxwKZAOY" target="iframe_a">Array of structures </a>
+                        </li>
+                        <li>
+                            <a href="/clangresourses5" target="iframe_a">References</a>
+                        </li>
+                        <li>
+                            <form action="/clangquiz5" method="post" target="iframe_a"><button type="submit" class="btn btn-light qbtn">Quiz</button></form>
+                        </li> 
+                    </ul>
+                </li>
+                <li>
+                  
+                    <a href="#pageSubmenu6" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Week 6</a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu6">
+                      <li>
+                            <a href="https://www.youtube.com/embed/sY-s7O0FiYE" target="iframe_a">Idea of pointers </a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/embed/b3G9RjG4l2s" target="iframe_a">Defining pointers </a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/embed/jYuqC9UD4GI" target="iframe_a">Pointer to an array </a>
+
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/embed/4HC8X966Q5M" target="iframe_a">Pointer to a structure </a>
+                        </li>
+                          <li>
+                            <a href="https://www.youtube.com/embed/9486zAxUqws" target="iframe_a">Self Referential Structures </a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/embed/9QdJExC2AVg" target="iframe_a">Enumeration data type </a>
+                        </li>
+                        <li>
+                            <a href="/clangresourses6" target="iframe_a">References</a>
+                        </li>
+                        <li>
+                            <form action="/clangquiz6" method="post" target="iframe_a"><button type="submit" class="btn btn-light qbtn">Quiz</button></form>
+                        </li>  
+                    </ul>
+                </li>
+                <li>
+                  
+                    <a href="#pageSubmenu7" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Week 7</a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu7">
+                    <li>
+                            <a href="https://www.youtube.com/embed/5k7ZgnHxHa4" target="iframe_a">Commonly used Preprocessor commands like include, define, undef, if, ifdef, ifndef </a>
+                        </li>
+                      
+                        <li>
+                            <a href="/clangresourses7" target="iframe_a">References</a>
+                        </li>
+                        <li>
+                            <form action="/clangquiz7" method="post" target="iframe_a"><button type="submit" class="btn btn-light qbtn">Quiz</button></form>
+                        </li> 
+                    </ul>
+                </li>
+                <li>
+                  
+                    <a href="#pageSubmenu8" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Week 8</a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu8">
+                      <li>
+                            <a href="https://www.youtube.com/embed/iYjoY_MiGz4" target="iframe_a">Text and Binary files </a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/embed/csEv5ZRMvpQ" target="iframe_a">Creating and reading and writing into files </a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/embed/z_2KChQ7tnY" target="iframe_a">Appending data to existing file </a>
+
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/embed/T_SQeShebQE" target="iframe_a">Writing and reading structures using binary files </a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/embed/CC1bafI52ZQ" target="iframe_a">Random accessing files  </a>
+                        </li>
+                        
+                        <li>
+                            <a href="/clangresourses8" target="iframe_a">References</a>
+                        </li>
+                        <li>
+                            <form action="/clangquiz8" method="post" target="iframe_a"><button type="submit" class="btn btn-light qbtn">Quiz</button></form>
+                        </li>   
+                    </ul>
+                </li>
+                <li>
+                  
+                    <a href="#pageSubmenu9" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Week 9</a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu9">
+                      <li>
+                            <a href="https://www.youtube.com/embed/qpUQpxpeixA" target="iframe_a">Designing structures programs </a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/embed/y1Q8VfgDX4c" target="iframe_a">Declaring a function </a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/embed/uGTITR9Dfpw" target="iframe_a">Signature of a function </a>
+
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/embed/puIK6kHcuqA" target="iframe_a">Parameters and return types of function </a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/embed/HEiPxjVR8CU" target="iframe_a">Passing parameters </a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/embed/HEiPxjVR8CU" target="iframe_a">Call by value  </a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/embed/2aScqfAI3oc" target="iframe_a">Passing arrays to function </a>
+                        </li><li>
+                            <a href="https://www.youtube.com/embed/qaszuaFXRTA" target="iframe_a">Passing pointers </a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/embed/qHk04Ov8MGI" target="iframe_a">Passing Structures into Functions</a>
+                        </li><li>
+                            <a href="https://www.youtube.com/embed/HEiPxjVR8CU" target="iframe_a">Call by reference </a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/embed/34jqYDaXgZM" target="iframe_a">Standard libraries and functions </a>
+                        </li>
+                        <li>
+                            <a href="/clangresourses9" target="iframe_a">References</a>
+                        </li>
+                        <li>
+                            <form action="/clangquiz9" method="post" target="iframe_a"><button type="submit" class="btn btn-light qbtn">Quiz</button></form>
+                        </li>  
+                    </ul>
+                </li>
+                <li>
+                  
+                    <a href="#pageSubmenu10" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Week 10</a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu10">
+                       <li>
+                            <a href="https://www.youtube.com/embed/hNY2yAIBnAU" target="iframe_a">Recursion</a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/embed/Ai3KXiLjCI4" target="iframe_a">Recursion Examples</a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/embed/9TbKaPH_wYs" target="iframe_a">Finding factorial </a>
+
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/embed/D59HhCkcmNA" target="iframe_a">Fibonacci series </a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/embed/_-wrCUN4z24" target="iframe_a">Limitations of recursive functions </a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/embed/y6oeSYfRW8Q" target="iframe_a">DMA (Allocating and freeing memory)  </a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/embed/v49bwqQ4ouM" target="iframe_a">Allocating memory for arrays of different data types in C </a>
+                        </li>
+                        <li>
+                            <a href="/clangresourses10" target="iframe_a">References</a>
+                        </li>
+                        <li>
+                            <form action="/clangquiz10" method="post" target="iframe_a"><button type="submit" class="btn btn-light qbtn">Quiz</button></form>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                  
+                    <a href="#pageSubmenu11" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Week 11</a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu11">
+                        <li>
+                            <a href="https://www.youtube.com/embed/Zpn5gaTvnHA" target="iframe_a">Algorithm to find roots of a quadratic equation </a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/embed/iMKr6Jvp-7U" target="iframe_a">Finding minimum and maximum in an array </a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/embed/SKh_sXkPvVE" target="iframe_a">Finding if a number is prime </a>
+
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/embed/oUiakDsrMmk" target="iframe_a">Linear search </a>
+                        </li>
+                          <li>
+                            <a href="https://www.youtube.com/embed/sRcJ-czGSiY" target="iframe_a">Binary search  </a>
+                        </li>
+                        
+                        <li>
+                            <a href="/clangresourses11" target="iframe_a">References</a>
+                        </li>
+                        <li>
+                            <form action="/clangquiz11" method="post" target="iframe_a"><button type="submit" class="btn btn-light qbtn">Quiz</button></form>
+                        </li> 
+                    </ul>
+                </li>
+                <li>
+                  
+                    <a href="#pageSubmenu12" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Week 12</a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu12">
+                        <li>
+                            <a href="https://www.youtube.com/embed/zxy3WMOzPwc" target="iframe_a">Bubble sort </a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/embed/ep8uG1IBApQ" target="iframe_a">Insertion sort  </a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/embed/qSRHW32sHow" target="iframe_a">Selection sort </a>
+
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/embed/9TlHvipP5yA" target="iframe_a">Basic concept of order of complexity through the example programs </a>
+                        </li>
+                          
+                        
+                        <li>
+                            <a href="/clangresourses12" target="iframe_a">References</a>
+                        </li>
+                        <li>
+                            <form action="/clangquiz12" method="post" target="iframe_a"><button type="submit" class="btn btn-light qbtn">Quiz</button></form>
+                        </li> 
+                    </ul>
+                </li>
+                <li>
+                  <form action="/clanggradedquiz" method="post" target="iframe_a"><button type="submit" class="btn btn-light qbtn"
+                    style="padding-right: 150px;">Graded Quiz</button></form>
+                        </li> 
+            </ul>
+
+           
+        </nav>
+
+        <!-- Page Content Holder -->
+        <div id="content">
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="navbar-btn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+                        <h2>C Programming</h2>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                       
+                        
+                    </div>
+
+                </div>
+
+            </nav>
+          <p id="cvid"></p> 
+          <iframe name="iframe_a" height="550px" width="100%" frameborder="0"></iframe>
+          
+
+  <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+                $(this).toggleClass('active');
+            });
+        });
+
+       
+
+    </script>
+    <script type="text/javascript">
+  window.onload = function() {
+  document.getElementById("cvid").innerHTML+='<a id="cvideo"href="https://www.youtube.com/embed/HIj8wU_rGIU" target="iframe_a"></a>';
+  document.getElementById("cvideo").click();
+};
+    </script>
+</body>
+
+</html>
+<%- include('partials/footer') %>

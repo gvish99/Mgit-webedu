@@ -1,0 +1,216 @@
+<div id="quiz"></div>
+<button id="submit">Submit Quiz</button>
+<div id="results"></div>
+<style type="text/css">
+	body{
+	font-size: 20px;
+	font-family: sans-serif;
+	color: #333;
+}
+.question{
+	font-weight: 600;
+}
+.answers {
+  margin-bottom: 20px;
+}
+.answers label{
+  display: block;
+}
+#submit{
+	font-family: sans-serif;
+	font-size: 20px;
+	background-color: #7386D5;
+	color: #fff;
+	border: 0px;
+	border-radius: 3px;
+	padding: 20px;
+	cursor: pointer;
+	margin-bottom: 20px;
+}
+#submit:hover{
+	background-color: #38a;
+}
+</style>
+<script type="text/javascript">
+	(function(){
+  function buildQuiz(){
+    
+    const output = [];
+
+    
+    myQuestions.forEach(
+      (currentQuestion, questionNumber) => {
+
+        
+        const answers = [];
+
+        
+        for(letter in currentQuestion.answers){
+
+          
+          answers.push(
+            `<label>
+              <input type="radio" name="question${questionNumber}" value="${letter}">
+              ${letter} :
+              ${currentQuestion.answers[letter]}
+            </label>`
+          );
+        }
+
+        
+        output.push(
+          `<div class="question"> ${currentQuestion.question} </div>
+          <div class="answers"> ${answers.join('')} </div>`
+        );
+      }
+    );
+
+    
+    quizContainer.innerHTML = output.join('');
+  }
+
+  function showResults(){
+
+   
+    const answerContainers = quizContainer.querySelectorAll('.answers');
+
+    
+    let numCorrect = 0;
+
+    
+    myQuestions.forEach( (currentQuestion, questionNumber) => {
+
+      
+      const answerContainer = answerContainers[questionNumber];
+      const selector = `input[name=question${questionNumber}]:checked`;
+      const userAnswer = (answerContainer.querySelector(selector) || {}).value;
+
+      
+      if(userAnswer === currentQuestion.correctAnswer){
+        
+        numCorrect++;
+
+        
+        answerContainers[questionNumber].style.color = 'lightgreen';
+      }
+      
+      else{
+        
+        answerContainers[questionNumber].style.color = 'red';
+      }
+    });
+
+    
+    resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length} (`+(numCorrect/myQuestions.length)*100 +`%)`;
+  }
+
+  const quizContainer = document.getElementById('quiz');
+  const resultsContainer = document.getElementById('results');
+  const submitButton = document.getElementById('submit');
+  const myQuestions = [
+    {
+      question: "What is an Algorithm?",
+      answers: {
+        a: "A flowchart",
+        b: "Step by step instructions used to solve a problem",
+        c: "A decision",
+        d: "A Pseudocode"
+      },
+      correctAnswer: "b"
+    },
+    {
+      question: "What are the three algorithm constructs? ",
+      answers: {
+        a: "Sequence, selection, repetition ",
+        b: "Input, output, process ",
+        c: "Input/output, decision, terminator ",
+        d: "Loop, input/output, process"
+      },
+      correctAnswer: "a"
+    },
+    {
+      question: "What is a flowchart?",
+      answers: {
+        a: "A text-based way of designing an algorithm",
+        b: "A specific programming language",
+        c: "A diagram that represents a set of instructions",
+        d: "A bullet point list of instructions"
+      },
+      correctAnswer: "c"
+    },
+    {
+      question: "What is the difference between a flowchart and pseudocode? ",
+      answers: {
+        a: "A flowchart is diagramatic whilst pseudocode is written in a programming language (eg. Pascal or Java) ",
+        b: "A flowchart is textual but pseudocode is diagrammatic ",
+        c: "A flowchart is a diagrammatic description of an algorithm whilst pseudocode is a textual description of an algorithm ",
+        d: "A flowchart and pseudocode are the same thing "
+      },
+      correctAnswer: "c"
+    },
+    
+    {
+      question: "When you write an algorithm the order of the instructions is very important.",
+      answers: {
+        a: "True",
+        b: "False"
+      },
+      correctAnswer: "a"
+    },
+    {
+      question: "What shape represents the start and end of a flowchart ",
+      answers: {
+        a: "Oval",
+        b: "Rectangle",
+        c: "Diamond",
+        d: "Square"
+      },
+      correctAnswer: "a"
+    },
+    {
+      question: 'What does this pseudocode do? print "Hello"',
+      answers: {
+        a: "Nothing",
+        b: 'Prints the word "Hello" to the output',
+        c: "hello is print in pseudocode",
+        d: "The code won't work"
+      },
+      correctAnswer: "b"
+    },
+    {
+      question: "A flowchart does not need to have an End ",
+      answers: {
+        a: "True",
+        b: "False"
+      },
+      correctAnswer: "a"
+    },
+    {
+      question: "What does an arrow represent in a flow chart?",
+      answers: {
+        a: "Decision making",
+        b: "Data Flow",
+        c: "Start",
+        d: " Stop"
+      },
+      correctAnswer: "b"
+    },
+     {
+      question: "What does a searching algorithm do?",
+      answers: {
+        a: "Search through a set of data",
+        b: "Save a set of data",
+        c: "Help to organise data",
+        d: "tracking data"
+      },
+      correctAnswer: "a"
+    }
+  ];
+
+  
+  buildQuiz();
+
+  
+  submitButton.addEventListener('click', showResults);
+})();
+</script>

@@ -1,0 +1,431 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Mgitwebedu</title>
+<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />  
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<link rel="stylesheet" href="css/sidemenustyles.css">
+<style type="text/css">
+.navi{
+  height: 100px;
+}
+.homenav a{
+text-decoration: none;
+color: black;
+}
+.homenav a:hover{
+
+background-color: #846bfb;
+color: black; 
+border-radius: 40px;
+}
+.profile:hover {
+  
+background-color: #846bfb;
+
+border-radius: 40px;
+
+}
+.profile{
+  border-style: none;background-color: #fff;color:black;margin-top: 7px;padding: 2px;
+}
+</style>
+
+</head>
+
+<body>
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300i,400" rel="stylesheet">
+</head>
+<body>
+ 
+<div class="header">
+  <nav class="navbar navbar-expand-lg navi">
+  <div class="container-fluid homediv">
+  <img src="images/mw.png" style="width: 110px; height: 80px; margin-right: 10px;margin-top: 15px;">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse homenav" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item" style="margin-left: 1000px;">
+          <a class="nav-link active" aria-current="page" href="/" >Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/enrolledcourses" >My Courses</a>
+        </li>
+        <li class="nav-item" >
+          <form action="/profile" method="post"><button class="profile">Profile</button></form>
+        </li>
+        <li class="nav-item" >
+          <a class="nav-link active " aria-current="page" href="/logout">Logout</a>
+        </li>
+        
+        
+      </ul>
+     
+    </div>
+  </div>
+</nav>
+</div>
+
+
+
+<div class="wrapper">
+        <!-- Sidebar Holder -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3>Course Navigation</h3>
+            </div>
+
+            <ul class="list-unstyled components">
+                
+                
+                <li>
+                  
+                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Week 1</a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                        <li>
+                            <a href="https://www.youtube.com/embed/-qB-Usp8lHY" target="iframe_a"> Molecular structure and Theories of Bonding: Atomic and Molecular </a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/embed/nq1zwrAIr4c" target="iframe_a"> Linear Combination of Atomic Orbitals (LCAO)</a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/embed/TQEhLXkNdmo" target="iframe_a">Molecular orbitals of diatomic molecules </a>
+
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/embed/XCwMrnVvSTU" target="iframe_a">Molecular orbital energy level diagrams of N2, O2 and F2 molecules </a>
+
+  
+                        <li>
+                            <a href="/chemresourses1" target="iframe_a">References</a>
+                        </li>
+                        <li>
+                          <form action="/chemquiz1" method="post" target="iframe_a"><button type="submit" class="btn btn-light qbtn">Quiz</button></form>
+                            
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                  
+                    <a href="#pageSubmenu2" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Week 2</a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu2">
+                        <li>
+                            <a href="https://www.youtube.com/embed/QP_bm0U3xZ0" target="iframe_a">π molecular orbitals of butadiene and benzene </a>
+                        </li>
+                         <li>
+                            <a href="https://www.youtube.com/embed/q0eZSfsZDic" target="iframe_a">Crystal Field Theory (CFT): Salient Features of CFT – Crystal Field Splitting of transition metal ion d- orbitals in Tetrahedral </a>
+                        </li> 
+                        <li>
+                            <a href="https://www.youtube.com/embed/z9CmSAV1wcY" target="iframe_a">Octahedral and square planar geometries </a>
+                        </li> 
+                        <li>
+                            <a href="https://www.youtube.com/embed/OrjmVTo77ms" target="iframe_a"> Band structure of solids and effect of doping on conductance </a>
+                        </li>
+                        
+                        <li>
+                            <a href="/chemresourses2" target="iframe_a">References</a>
+                        </li>
+                        <li>
+                            <form action="/chemquiz2" method="post" target="iframe_a"><button type="submit" class="btn btn-light qbtn">Quiz</button></form>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                  
+                    <a href="#pageSubmenu3" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Week 3</a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu3">
+                        <li>
+                            <a href="https://www.youtube.com/embed/GfNwVUd1LBU" target="iframe_a"> Introduction – hardness of water – Causes of hardness </a>
+                        </li>
+                         <li>
+                            <a href="https://www.youtube.com/embed/EQyOVLaxSsk" target="iframe_a">Types of hardness: temporary and permanent </a>
+                        </li>
+                         <li>
+                            <a href="https://www.youtube.com/embed/iyFHXAKbgw8" target="iframe_a">Expression and units of hardness </a>
+                        </li>
+                         <li>
+                            <a href="https://www.youtube.com/embed/FCQ26RQBZLg" target="iframe_a">Estimation of hardness of water by complexometric  method </a>
+                        </li>
+                         <li>
+                            <a href="https://www.youtube.com/embed/0ftTMTO9H0Q" target="iframe_a"> Portable water and its specifications </a>
+                        </li>
+                        
+                        <li>
+                            <a href="/chemresourses3" target="iframe_a">References</a>
+                        </li>
+                        <li>
+                            <form action="/chemquiz3" method="post" target="iframe_a"><button type="submit" class="btn btn-light qbtn">Quiz</button></form>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                  
+                    <a href="#pageSubmenu4" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Week 4</a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu4">
+                       <li>
+                            <a href="https://www.youtube.com/embed/ory96NHySw4" target="iframe_a">Steps involved in treatment of water </a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/embed/th1sjVeVo6U" target="iframe_a">Disinfection of water by chlorination and ozonization </a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/embed/I2Bm4lVWuIA" target="iframe_a"> Boiler feed water and its treatment – Calgon conditioning </a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/embed/7bnu8Jjt9Lg" target="iframe_a">Phosphate conditioning and Colloidal conditioning </a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/embed/x8OBVQVGXDM" target="iframe_a">External treatment of water – Ion exchange process </a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/embed/iY_f_9NWiYA" target="iframe_a">Desalination of water – Reverse osmosis </a>
+                        </li>
+                        
+                        <li>
+                            <a href="/chemresourses4" target="iframe_a">References</a>
+                        </li>
+                        <li>
+                            <form action="/chemquiz4" method="post" target="iframe_a"><button type="submit" class="btn btn-light qbtn">Quiz</button></form>
+                        </li> 
+                    </ul>
+                </li>
+                <li>
+                  
+                    <a href="#pageSubmenu5" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Week 5</a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu5">
+                        <li>
+                            <a href="https://www.youtube.com/embed/xj8HNg_zWIw" target="iframe_a">Electro chemical cells- electrode potential  </a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/embed/xj8HNg_zWIw" target="iframe_a">Standard electrode potential </a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/embed/WLwRuhodt4E" target="iframe_a">Types of electrodes – calomel, Quinhydrone and glass electrode </a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/embed/8_4A3m8DDEA" target="iframe_a"> Nernst equation Determination of pH of a solution by using quinhydrone and glass electrode </a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/embed/rkf6PQFv_R4" target="iframe_a">Electrochemical series and its applications </a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/embed/JwCeCS2YRVo" target="iframe_a">Potentiometric- titrations </a>
+                        </li>
+                        <li>
+
+                            <a href="/chemresourses5" target="iframe_a">References</a>
+                        </li>
+                        <li>
+                            <form action="/chemgquiz5" method="post" target="iframe_a"><button type="submit" class="btn btn-light qbtn">Quiz</button></form>
+                        </li> 
+                    </ul>
+                </li>
+                <li>
+                  
+                    <a href="#pageSubmenu6" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Week 6</a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu6">
+                      <li>
+                            <a href="https://www.youtube.com/embed/HTFjHINBJts" target="iframe_a">Batteries – Primary (Lithium cell) and secondary batteries (Lead – acid storage battery and Lithium ion battery)</a>
+                        </li>
+                       <li>
+                            <a href="https://www.youtube.com/embed/5pYe91iP6gE" target="iframe_a">Causes and effects of corrosion – theories of chemical and electrochemical corrosion – mechanism of electrochemical corrosion </a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/embed/5pYe91iP6gE" target="iframe_a"> Types of corrosion: Galvanic, water-line and pitting corrosion </a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/embed/-Z-wXolzDjE" target="iframe_a"> Factors affecting rate of corrosion </a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/embed/5cXgY3OnkVk" target="iframe_a">Corrosion control methods- Cathodic protection – Sacrificial anode and impressed current cathodic methods - </a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/embed/2-GWZk8Ev5U" target="iframe_a">Surface coatings – metallic coatings – methods of application </a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/embed/pCBZKrAiKOU" target="iframe_a"> Electro-less plating of Nickel </a>
+                        </li>
+                        <li>
+                            <a href="/chemresourses6" target="iframe_a">References</a>
+                        </li>
+                        <li>
+                            <form action="/chemquiz6" method="post" target="iframe_a"><button type="submit" class="btn btn-light qbtn">Quiz</button></form>
+                        </li>  
+                    </ul>
+                </li>
+                <li>
+                  
+                    <a href="#pageSubmenu7" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Week 7</a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu7">
+                    <li>
+                            <a href="https://www.youtube.com/embed/CvfwOr0-8io" target="iframe_a"> Stereochemistry, Reaction Mechanism and synthesis of drug molecules:Introduction to representation of 3-dimensional structures </a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/embed/2AalKF41KC4" target="iframe_a"> Structural and stereoisomers, Configurations </a>
+                        </li>
+                         <li>
+                            <a href="https://www.youtube.com/embed/y4IKqV81E2E" target="iframe_a">Symmetry and chirality </a>
+                        </li>
+                         <li>
+                            <a href="https://www.youtube.com/embed/6_OmNqqCVvo" target="iframe_a">Enantiomers , Diastereomers </a>
+                        </li>
+                         <li>
+                            <a href="https://www.youtube.com/embed/duGxp_XZzvw" target="iframe_a"> Optical activity and Absolute configuration </a>
+                        </li>
+                         <li>
+                            <a href="https://www.youtube.com/embed/9BkRkaxP8js" target="iframe_a">Conformational analysis of n- butane </a>
+                        </li>
+                        <li>
+                            <a href="/chemresourses7" target="iframe_a">References</a>
+                        </li>
+                        <li>
+                            <form action="/chemquiz7" method="post" target="iframe_a"><button type="submit" class="btn btn-light qbtn">Quiz</button></form>
+                        </li> 
+                    </ul>
+                </li>
+                <li>
+                  
+                    <a href="#pageSubmenu8" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Week 8</a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu8">
+                      <li>
+                            <a href="https://www.youtube.com/embed/yrvV85H737o" target="iframe_a">Nucleophilic substitution reactions: Mechanism of SN1, SN2 reactions </a>
+                        </li>
+                         <li>
+                            <a href="https://www.youtube.com/embed/eZfn-nN9JTI" target="iframe_a">Electrophilic and nucleophilic addition reactions: Addition of HBr to propene </a>
+                        </li>
+                         <li>
+                            <a href="https://www.youtube.com/embed/C3iWAHc5AFE" target="iframe_a">Markownikoff and anti Markownikoff’s additions </a>
+                        </li>
+                         <li>
+                            <a href="https://www.youtube.com/embed/fEXSAbJVclM" target="iframe_a">Grignard additions on carbonyl compounds </a>
+                        </li>
+                         <li>
+                            <a href="https://www.youtube.com/embed/c9PR-utzbZs" target="iframe_a">Elimination reactions: Dehydro halogenation of alkylhalides </a>
+                        </li>
+                         <li>
+                            <a href="https://www.youtube.com/embed/9h1zQxbmZI4" target="iframe_a"> Saytzeff rule </a>
+                        </li>
+                         <li>
+                            <a href="https://www.youtube.com/embed/ecFrUFIkKnc" target="iframe_a">Oxidation reactions: Oxidation of alcohols using KMnO4 and chromic acid</a>
+                        </li>
+                         <li>
+                            <a href="https://www.youtube.com/embed/Pp0LeL0SkRg" target="iframe_a"> Reduction reactions: reduction of carbonyl compounds using LiAlH4 & NaBH4 </a>
+                        </li>
+                         <li>
+                            <a href="https://www.youtube.com/embed/Ux9BEDgfZBg" target="iframe_a"> Hydroboration of olefins, Structure </a>
+                        </li>
+                         <li>
+                            <a href="https://www.youtube.com/embed/8oQkJpuCsIQ" target="iframe_a"> Synthesis and pharmaceutical applications of Paracetamol and Aspirin </a>
+                        </li>
+
+
+                        
+                        <li>
+                            <a href="/chemresourses8" target="iframe_a">References</a>
+                        </li>
+                        <li>
+                            <form action="/chemquiz8" method="post" target="iframe_a"><button type="submit" class="btn btn-light qbtn">Quiz</button></form>
+                        </li>   
+                    </ul>
+                </li>
+                <li>
+                  
+                    <a href="#pageSubmenu9" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Week 9</a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu9">
+                      <li>
+                            <a href="https://www.youtube.com/embed/pd0z68iPXS4" target="iframe_a">Spectroscopic techniques and applications: Principles of </a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/embed/Nblonk2R6E4" target="iframe_a">Selection rules and applications of electronic spectroscopy </a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/embed/AjdrZoFnoq8" target="iframe_a">Vibrational and rotational spectroscopy </a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/embed/CH-4TtZSvY0" target="iframe_a">Basic concepts of Nuclear magnetic resonance Spectroscopy </a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/embed/2QBDNxiGsAY" target="iframe_a">Chemical shift </a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/embed/E44W54z_Ykw" target="iframe_a">Introduction to Magnetic resonance imaging </a>
+                        </li>
+                        <li>
+                            <a href="/chemresourses9" target="iframe_a">References</a>
+                        </li>
+                        <li>
+                            <form action="/chemquiz9" method="post" target="iframe_a"><button type="submit" class="btn btn-light qbtn">Quiz</button></form>
+                        </li>  
+                    </ul>
+                </li>
+                
+                <li>
+                  <form action="/chemgradedquiz" method="post" target="iframe_a"><button type="submit" class="btn btn-light qbtn"
+                    style="padding-right: 150px;">Graded Quiz</button></form>
+                        </li> 
+            </ul>
+
+           
+        </nav>
+
+        <!-- Page Content Holder -->
+        <div id="content">
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="navbar-btn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+                        <h2>Chemistry</h2>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                       
+                        
+                    </div>
+
+                </div>
+
+            </nav>
+          <p id="cvid"></p> 
+          <iframe name="iframe_a" height="550px" width="100%" frameborder="0"></iframe>
+          
+
+  <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+                $(this).toggleClass('active');
+            });
+        });
+
+       
+
+    </script>
+    <script type="text/javascript">
+  window.onload = function() {
+  document.getElementById("cvid").innerHTML+='<a id="cvideo"href="https://www.youtube.com/embed/Rd4a1X3B61w" target="iframe_a"></a>';
+  document.getElementById("cvideo").click();
+};
+    </script>
+</body>
+
+</html>
+<%- include('partials/footer') %>

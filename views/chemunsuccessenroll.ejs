@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Mgitwebedu</title>
+<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />  
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<link rel="stylesheet" href="css/sidemenustyles.css">
+<style type="text/css">
+.navi{
+  height: 100px;
+}
+.homenav a{
+text-decoration: none;
+color: black;
+}
+.homenav a:hover{
+
+background-color: #846bfb;
+color: black; 
+border-radius: 40px;
+}
+.profile:hover {
+  
+background-color: #846bfb;
+
+border-radius: 40px;
+
+}
+.profile{
+  border-style: none;background-color: #fff;color:black;margin-top: 7px;padding: 2px;
+}
+</style>
+
+</head>
+
+<body>
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300i,400" rel="stylesheet">
+</head>
+<body>
+ 
+<div class="header">
+  <nav class="navbar navbar-expand-lg navi">
+  <div class="container-fluid homediv">
+  <img src="images/mw.png" style="width: 110px; height: 80px; margin-right: 10px;margin-top: 15px;">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse homenav" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item" style="margin-left: 1000px;">
+          <a class="nav-link active" aria-current="page" href="/" >Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/enrolledcourses" >My Courses</a>
+        </li>
+        <li class="nav-item" >
+          <form action="/profile" method="post"><button class="profile">Profile</button></form>
+        </li>
+        <li class="nav-item" >
+          <a class="nav-link active " aria-current="page" href="/logout">Logout</a>
+        </li>
+        
+        
+      </ul>
+     
+    </div>
+  </div>
+</nav>
+</div>
+
+
+
+
+    <div class="wrapper">
+        <!-- Sidebar Holder -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3>Course Navigation</h3>
+            </div>
+
+            <ul class="list-unstyled components">
+                
+                
+                <li>
+                  
+                    <a href="#about" >About the course</a>
+                    
+                </li>
+                <li>
+                  
+                    <a href="#obj">Course Objectives</a>
+                    
+                </li>
+                <li>
+                  
+                    <a href="#out">Course Outcomes</a>
+                    
+                <li>
+                  
+                    <a href="#line" >Course Outine</a>
+                    
+                </li>
+                <li>
+                  
+                    <a href="#ins">Instructors</a>
+                    
+                </li>
+               
+                
+            </ul>
+
+           
+        </nav>
+
+        <!-- Page Content Holder -->
+        <div id="content">
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="navbar-btn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+                        <h2>Chemistry</h2>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                       
+                        
+                    </div>
+                    <form action="/chemcourse" method="POST">
+            <div class="form-group">
+             
+            </div>
+             <input type="hidden" id="custId" name="coursename" value="Chemistry">
+            
+            <button type="submit" class="btn" style="background-color: #6d7fcc;color: #fff;margin-left: 700px;">Go to course</button>
+
+          </form>
+                </div>
+            </nav>
+            <div role="alert" class="alert alert-danger">
+                    <strong><i class="fas fa-info-circle"></i> Note: </strong> Already Enrolled</div>
+           <div id="about"><h2>About the course</h2> 
+            <p>Introduction to Molecular structure and Theories of Bonding, Water and its treatment, Electrochemistry and corrosion, Stereochemistry, Reaction Mechanism and synthesis of drug molecules and Spectroscopic techniques and application are all covered in this course. </p></div><br>
+             
+            <div id="obj">
+             <h2>Course Objectives</h2><br>
+            <ul>
+              <li>
+              To bring adaptability to the concepts of chemistry and to acquire the required skills to become a perfect engineer.
+              </li>
+              <li>
+              To impart the basic knowledge of atomic, molecular and electronic modifications which makes the student to understand the technology based on them.
+              </li>
+              <li>
+              To acquire the knowledge of electrochemistry, corrosion and water treatment which are essential for the Engineers and in industry
+              </li>
+              <li>
+              To acquire the skills pertaining to spectroscopy and to apply them for medical and other fields
+              </li>
+               <li>
+                 To impart the knowledge of stereochemistry and synthetic aspects useful for understanding reaction pathways
+              </li>
+            </ul>
+          </div>
+            <br>
+            
+
+            <div id="out">    
+            <h2>Course Outcomes: The student will learn</h2><br>
+            <ul>
+              <li>
+                The knowledge of atomic, molecular and electronic changes, band theory related to conductivity
+              </li>
+              <li>
+                The required principles and concepts of electrochemistry, corrosion and in understanding the problem of water and its treatment.
+              </li>
+              <li>
+                The required skills to get clear concepts on basic spectroscopy and application to medical and other fields.
+              </li>
+              <li>
+              The knowledge of configurational and conformational analysis of molecules and reaction mechanisms.
+              </li>
+             
+            </ul>
+            <br>
+            </div>
+            <div id="line">
+            <h2>Course Outine</h2>
+           <ul>
+             <li>
+              <b>Week  1 :</b> Atomic and Molecular orbitals, Linear Combination of Atomic Orbitals (LCAO) ,Molecular orbitals of diatomic molecules ,Molecular orbital energy level diagrams of N2, O2 and F2 molecules.
+             </li><br>
+               <li>
+              <b>Week  2 :</b> π molecular orbitals of butadiene and benzene, Crystal Field Theory (CFT): Salient Features of CFT – Crystal Field Splitting of transition metal ion d- orbitals in Tetrahedral, Octahedral and square planar geometries, Band structure of solids and effect of doping on conductance.
+             </li><br>
+               <li>
+              <b>Week  3 :</b> Introduction – hardness of water – Causes of hardness, Types of hardness: temporary and permanent, Expression and units of hardness, Estimation of hardness of water by complexometric  method,Portable water and its specifications.
+             </li><br>
+               <li>
+              <b>Week  4 :</b>Steps involved in treatment of water, Disinfection of water by chlorination and ozonization, Boiler feed water and its treatment – Calgon conditioning, Phosphate conditioning and Colloidal conditioning , External treatment of water – Ion exchange process, Desalination of water – Reverse osmosis.
+             </li><br>
+               <li>
+              <b>Week  5 :</b> Electro chemical cells- electrode potential, Standard electrode potential, Types of electrodes – calomel, Quinhydrone and glass electrode , Nernst equation Determination of pH of a solution by using quinhydrone and glass electrode, Electrochemical series and its applications, Potentiometric- titrations.
+             </li><br>
+               <li>
+              <b>Week  6 :</b> Batteries – Primary (Lithium cell) and secondary batteries (Lead – acid storage battery and Lithium ion battery), Causes and effects of corrosion – theories of chemical and electrochemical corrosion – mechanism of electrochemical corrosion,Types of corrosion: Galvanic, water-line and pitting corrosion, Factors affecting rate of corrosion, Corrosion control methods- Cathodic protection – Sacrificial anode and impressed current cathodic methods, Surface coatings – metallic coatings – methods of application, Electro-less plating of Nickel.
+             </li><br>
+               <li>
+              <b>Week  7 :</b>Introduction to representation of 3-dimensional structures, Structural and stereoisomers, Configurations,  Symmetry and chirality, Enantiomers , Diastereomers ,Optical activity and Absolute configuration, Conformational analysis of n- butane. 
+             </li><br>
+               <li>
+              <b>Week  8 :</b> Substitution reactions: Nucleophilic substitution reactions: Mechanism of SN1, SN2 reactions, Electrophilic and nucleophilic addition reactions: Addition of HBr to propene, Markownikoff and anti Markownikoff’s additions, Grignard additions on carbonyl compounds, Elimination reactions: Dehydro halogenation of alkylhalides, Saytzeff rule, Oxidation reactions: Oxidation of alcohols using KMnO4 and chromic acid ,Reduction reactions: reduction of carbonyl compounds using LiAlH4 & NaBH, Hydroboration of olefins: Structure, Synthesis and pharmaceutical applications of Paracetamol and Aspirin.
+             </li><br>
+               <li>
+              <b>Week  9 :</b> Spectroscopic techniques and applications: Principles of spectroscopy ,Selection rules and applications of electronic spectroscopy, Vibrational and rotational spectroscopy, Basic concepts of Nuclear magnetic resonance Spectroscopy, Chemical shift, Introduction to Magnetic resonance imaging 
+             </li>
+
+           </ul>
+
+             </div>  
+            
+            <div id="ins">
+            <h2>Instructors</h2>
+            <p>Dr. A S</p>
+          </div>
+         <div class="container mt-5">
+  </div>
+
+
+            
+
+           
+        </div>
+    
+
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+                $(this).toggleClass('active');
+            });
+        });
+
+    </script>
+</body>
+
+</html>

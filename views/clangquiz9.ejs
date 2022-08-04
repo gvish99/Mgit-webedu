@@ -1,0 +1,200 @@
+<div id="quiz"></div>
+<button id="submit">Submit Quiz</button>
+<div id="results"></div>
+<style type="text/css">
+	body{
+	font-size: 20px;
+	font-family: sans-serif;
+	color: #333;
+}
+.question{
+	font-weight: 600;
+}
+.answers {
+  margin-bottom: 20px;
+}
+.answers label{
+  display: block;
+}
+#submit{
+	font-family: sans-serif;
+	font-size: 20px;
+	background-color: #7386D5;
+	color: #fff;
+	border: 0px;
+	border-radius: 3px;
+	padding: 20px;
+	cursor: pointer;
+	margin-bottom: 20px;
+}
+#submit:hover{
+	background-color: #38a;
+}
+</style>
+<script type="text/javascript">
+	(function(){
+  function buildQuiz(){
+    
+    const output = [];
+
+    
+    myQuestions.forEach(
+      (currentQuestion, questionNumber) => {
+
+        
+        const answers = [];
+
+        
+        for(letter in currentQuestion.answers){
+
+          
+          answers.push(
+            `<label>
+              <input type="radio" name="question${questionNumber}" value="${letter}">
+              ${letter} :
+              ${currentQuestion.answers[letter]}
+            </label>`
+          );
+        }
+
+        
+        output.push(
+          `<div class="question"> ${currentQuestion.question} </div>
+          <div class="answers"> ${answers.join('')} </div>`
+        );
+      }
+    );
+
+    
+    quizContainer.innerHTML = output.join('');
+  }
+
+  function showResults(){
+
+   
+    const answerContainers = quizContainer.querySelectorAll('.answers');
+
+    
+    let numCorrect = 0;
+
+    
+    myQuestions.forEach( (currentQuestion, questionNumber) => {
+
+      
+      const answerContainer = answerContainers[questionNumber];
+      const selector = `input[name=question${questionNumber}]:checked`;
+      const userAnswer = (answerContainer.querySelector(selector) || {}).value;
+
+      
+      if(userAnswer === currentQuestion.correctAnswer){
+        
+        numCorrect++;
+
+        
+        answerContainers[questionNumber].style.color = 'lightgreen';
+      }
+      
+      else{
+        
+        answerContainers[questionNumber].style.color = 'red';
+      }
+    });
+
+    
+    resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length} (`+(numCorrect/myQuestions.length)*100 +`%)`;
+  }
+
+  const quizContainer = document.getElementById('quiz');
+  const resultsContainer = document.getElementById('results');
+  const submitButton = document.getElementById('submit');
+  const myQuestions = [
+    {
+      question: "Choose correct statement about Functions in C Language",
+      answers: {
+        a: "A Function is a group of c statements which can be reused any number of times",
+        b: "Every Function has a return type",
+        c: "Every Function may  know or may not return a value",
+        d: "All of the above"
+      },
+      correctAnswer: "d"
+    },{
+      question: "A function which calls itself is called a ___ function.",
+      answers: {
+        a: " Self Function",
+        b: " Auto Function",
+        c: " Recursive Function",
+        d: " Static Function"
+      },
+      correctAnswer: "c"
+    },
+{
+      question: " What are the types of functions in C Language?",
+      answers: {
+        a: " Library Functions",
+        b: " User Defined Functions",
+        c: " Both Library and User Defined",
+        d: " None of the above"
+      },
+      correctAnswer: "c"
+    },
+{
+      question: " What is the limit for number of functions in a C Program?",
+      answers: {
+        a: "16",
+        b: "31",
+        c: "32",
+        d: "No Limit"
+      },
+      correctAnswer: "d"
+    },
+{
+      question: " Every C Program should contain which function?",
+      answers: {
+        a: " printf()",
+        b: " show()",
+        c: " scanf()",
+        d: " main()"
+      },
+      correctAnswer: "d"
+    },
+{
+      question: " What is the minimum number of functions to be present in a C Program?",
+      answers: {
+        a: "1",
+        b: "2",
+        c: "3",
+        d: "4"
+      },
+      correctAnswer: "a"
+    },
+{
+      question: " What is the maximum number of statements that can present in a C function?",
+      answers: {
+        a: "64",
+        b: "128",
+        c: "256",
+        d: "none of the above"
+      },
+      correctAnswer: "d"
+    },
+
+{
+      question: " The keyword used to transfer control from a function back to the calling function is",
+      answers: {
+        a: "switch",
+        b: "goto",
+        c: "return",
+        d: "exit"
+      },
+      correctAnswer: "c"
+    }
+
+  ];
+
+  
+  buildQuiz();
+
+  
+  submitButton.addEventListener('click', showResults);
+})();
+</script>

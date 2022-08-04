@@ -1,0 +1,210 @@
+<div id="quiz"></div>
+<button id="submit">Submit Quiz</button>
+<div id="results"></div>
+<style type="text/css">
+	body{
+	font-size: 20px;
+	font-family: sans-serif;
+	color: #333;
+}
+.question{
+	font-weight: 600;
+}
+.answers {
+  margin-bottom: 20px;
+}
+.answers label{
+  display: block;
+}
+#submit{
+	font-family: sans-serif;
+	font-size: 20px;
+	background-color: #7386D5;
+	color: #fff;
+	border: 0px;
+	border-radius: 3px;
+	padding: 20px;
+	cursor: pointer;
+	margin-bottom: 20px;
+}
+#submit:hover{
+	background-color: #38a;
+}
+</style>
+<script type="text/javascript">
+	(function(){
+  function buildQuiz(){
+    
+    const output = [];
+
+    
+    myQuestions.forEach(
+      (currentQuestion, questionNumber) => {
+
+        
+        const answers = [];
+
+        
+        for(letter in currentQuestion.answers){
+
+          
+          answers.push(
+            `<label>
+              <input type="radio" name="question${questionNumber}" value="${letter}">
+              ${letter} :
+              ${currentQuestion.answers[letter]}
+            </label>`
+          );
+        }
+
+        
+        output.push(
+          `<div class="question"> ${currentQuestion.question} </div>
+          <div class="answers"> ${answers.join('')} </div>`
+        );
+      }
+    );
+
+    
+    quizContainer.innerHTML = output.join('');
+  }
+
+  function showResults(){
+
+   
+    const answerContainers = quizContainer.querySelectorAll('.answers');
+
+    
+    let numCorrect = 0;
+
+    
+    myQuestions.forEach( (currentQuestion, questionNumber) => {
+
+      
+      const answerContainer = answerContainers[questionNumber];
+      const selector = `input[name=question${questionNumber}]:checked`;
+      const userAnswer = (answerContainer.querySelector(selector) || {}).value;
+
+      
+      if(userAnswer === currentQuestion.correctAnswer){
+        
+        numCorrect++;
+
+        
+        answerContainers[questionNumber].style.color = 'lightgreen';
+      }
+      
+      else{
+        
+        answerContainers[questionNumber].style.color = 'red';
+      }
+    });
+
+    
+    resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length} (`+(numCorrect/myQuestions.length)*100 +`%)`;
+  }
+
+  const quizContainer = document.getElementById('quiz');
+  const resultsContainer = document.getElementById('results');
+  const submitButton = document.getElementById('submit');
+  const myQuestions = [
+    {
+      question: " Array can be considered as set of elements stored in consecutive memory locations but having __________.",
+      answers: {
+        a: " Same data type ",
+       b: " Different data type",                      
+       c: " Same scope",
+        d: "None of these"
+      },
+      correctAnswer: "a"
+    },{
+      question: " What is the maximun number of dimensions an array in C may have?",
+      answers: {
+        a: "2",
+        b: "3",
+        c: "8",
+        d: " Theoretically no limit. The only practical limits are memory size and compilers"
+      },
+      correctAnswer: "d"
+    },
+
+{
+      question: " Size of the array need not be specified, when",
+      answers: {
+        a: " Initialization is a part of definition",
+        b: " It is a formal parameter",
+        c: " It is a declaration",
+        d: "All of the above"
+      },
+      correctAnswer: "a"
+    },
+{
+      question: " Which of the following correctly declares an array?",
+      answers: {
+        a: " int array[10];",
+        b: " int array;",
+        c: " array{10};",
+        d: " array ray[10];"
+      },
+      correctAnswer: "a"
+    },
+{
+      question: " What is the index number of the last element of an array with 29 elements?",
+      answers: {
+        a: "29",
+        b: "28",
+        c: "0",
+        d: " Programmer-defined"
+      },
+      correctAnswer: "b"
+    },
+{
+      question: " Array index starts from?",
+      answers: {
+        a: "1",
+        b: "-1",
+        c: "0",
+        d: "value of first statement"
+      },
+      correctAnswer: "c"
+    },
+{
+      question: " String is an array of characters with …….. character as the last element of array.",
+      answers: {
+        a: "0",
+        b: "1",
+        c: "empty",
+        d: "null"
+      },
+      correctAnswer: "d"
+    },
+{
+      question: " The library function used to calculate the length of the string is",
+      answers: {
+        a: "strstr()",
+        b: "strrev()",
+        c: "strlen()",
+        d: "strcat()"
+      },
+      correctAnswer: "c"
+    },
+{
+      question: " Which of the following function is more appropriate for reading in a multi-word string?",
+      answers: {
+        a: "puts()",
+        b: "gets()",
+        c: "scanf()",
+        d: "printf()",
+      },
+      correctAnswer: "a"
+    }
+
+  ];
+
+  
+  buildQuiz();
+
+  
+  submitButton.addEventListener('click', showResults);
+})();
+</script>

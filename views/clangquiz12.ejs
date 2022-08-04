@@ -1,0 +1,180 @@
+<div id="quiz"></div>
+<button id="submit">Submit Quiz</button>
+<div id="results"></div>
+<style type="text/css">
+	body{
+	font-size: 20px;
+	font-family: sans-serif;
+	color: #333;
+}
+.question{
+	font-weight: 600;
+}
+.answers {
+  margin-bottom: 20px;
+}
+.answers label{
+  display: block;
+}
+#submit{
+	font-family: sans-serif;
+	font-size: 20px;
+	background-color: #7386D5;
+	color: #fff;
+	border: 0px;
+	border-radius: 3px;
+	padding: 20px;
+	cursor: pointer;
+	margin-bottom: 20px;
+}
+#submit:hover{
+	background-color: #38a;
+}
+</style>
+<script type="text/javascript">
+	(function(){
+  function buildQuiz(){
+    
+    const output = [];
+
+    
+    myQuestions.forEach(
+      (currentQuestion, questionNumber) => {
+
+        
+        const answers = [];
+
+        
+        for(letter in currentQuestion.answers){
+
+          
+          answers.push(
+            `<label>
+              <input type="radio" name="question${questionNumber}" value="${letter}">
+              ${letter} :
+              ${currentQuestion.answers[letter]}
+            </label>`
+          );
+        }
+
+        
+        output.push(
+          `<div class="question"> ${currentQuestion.question} </div>
+          <div class="answers"> ${answers.join('')} </div>`
+        );
+      }
+    );
+
+    
+    quizContainer.innerHTML = output.join('');
+  }
+
+  function showResults(){
+
+   
+    const answerContainers = quizContainer.querySelectorAll('.answers');
+
+    
+    let numCorrect = 0;
+
+    
+    myQuestions.forEach( (currentQuestion, questionNumber) => {
+
+      
+      const answerContainer = answerContainers[questionNumber];
+      const selector = `input[name=question${questionNumber}]:checked`;
+      const userAnswer = (answerContainer.querySelector(selector) || {}).value;
+
+      
+      if(userAnswer === currentQuestion.correctAnswer){
+        
+        numCorrect++;
+
+        
+        answerContainers[questionNumber].style.color = 'lightgreen';
+      }
+      
+      else{
+        
+        answerContainers[questionNumber].style.color = 'red';
+      }
+    });
+
+    
+    resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length} (`+(numCorrect/myQuestions.length)*100 +`%)`;
+  }
+
+  const quizContainer = document.getElementById('quiz');
+  const resultsContainer = document.getElementById('results');
+  const submitButton = document.getElementById('submit');
+  const myQuestions = [
+    {
+      question: "What is an Algorithm?",
+      answers: {
+        a: " A set of instructions that, when executed, completes a defined task that solves a problem.",
+        b: " The process of breaking apart a problem.",
+        c: " The process of removing unnecessary detail.",
+        d: " A sequence of instructions."
+      },
+      correctAnswer: "a"
+    },
+{
+      question: " How do we represent the complexity of an algorithm?",
+      answers: {
+        a: " Big-R",
+        b: " Big-O",
+        c: " Big-N",
+        d: " Big-A"
+      },
+      correctAnswer: "b"
+    },
+{
+      question: " What is meant by the time complexity of an algorithm? ",
+      answers: {
+        a: " The amount of time required to solve a particular problem",
+        b: " How difficult a problem is to solve",
+        c: " How many lines of code are required to solve a problem",
+        d: " How quickly a solution can be developed"
+      },
+      correctAnswer: "a"
+    },
+{
+      question: " How do you reduce the space complexity?",
+      answers: {
+        a: " Try to complete all of the operations on the same data set",
+        b: " You reduce the amount of embedded for loops, and then reduce the amount of items you complete the operations on i.e. divide and conquer ",
+        c: " There are several advantages to this modular approach to program development ",
+        d: " Each argument is preceded by its associated type declaration."
+      },
+      correctAnswer: "a"
+    },
+{
+      question: " Which of the following is not O(n^2)? ",
+      answers: {
+        a: "(15^10) * n + 12099",
+        b: " n^1.98",
+        c: " n^3 / (sqrt(n))",
+        d: "(2^20) * n"
+      },
+      correctAnswer: "c"
+    },
+{
+      question: "If for an algorithm time complexity is given by O(1) then complexity of it is:",
+      answers: {
+        a: " constant",
+        b: " polynomial",
+        c: " exponential",
+        d: " none of the mentioned"
+      },
+      correctAnswer: "a"
+    }
+
+  ];
+
+  
+  buildQuiz();
+
+  
+  submitButton.addEventListener('click', showResults);
+})();
+</script>
